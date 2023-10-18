@@ -22,6 +22,8 @@ export class ProductsController {
   @Post()
   @Roles(Role.Seller, Role.Admin)
   create(@Body() createProductDto: CreateProductDto) {
+    console.log(createProductDto);
+
     return this.productsService.create(createProductDto);
   }
 
